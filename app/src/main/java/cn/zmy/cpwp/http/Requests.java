@@ -19,4 +19,15 @@ public class Requests
                        .url("https://raw.githubusercontent.com/shimohq/chinese-programmer-wrong-pronunciation/master/README.md")
                        .build();
     }
+
+    /**
+     * 下载单词发音文件
+     * */
+    public static Request downloadWordsPronunciation(String url)
+    {
+        return new Request.Builder()
+                       .get()
+                       .url(url)
+                       .build();
+    }
 }

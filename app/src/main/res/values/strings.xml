@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">中国程序员容易发音错误的单词</string>
+
+    <string name="words_no_pronunciation">该单词无在线发音</string>
 </resources>

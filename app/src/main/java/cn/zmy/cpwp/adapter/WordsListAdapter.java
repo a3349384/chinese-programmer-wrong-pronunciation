@@ -24,5 +24,14 @@ public class WordsListAdapter extends BaseBindingListAdapter<Words, WordslistIte
         Words model = mItems.get(position);
         binding.setModel(model);
         binding.executePendingBindings();
+
+        if (mItemClickListener != null)
+        {
+            binding.getRoot().setOnClickListener(v -> mItemClickListener.onItemClick(model));
+        }
+        else
+        {
+            binding.getRoot().setOnClickListener(null);
+        }
     }
 }
