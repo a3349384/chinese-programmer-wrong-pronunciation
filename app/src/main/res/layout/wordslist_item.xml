@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="cn.zmy.cpwp.model.Words"/>
+
+        <variable
+            name="model"
+            type="Words"/>
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:layout_width="match_parent"
+                 android:layout_height="80dp"
+                 android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/words"
+            android:textSize="@dimen/textSizeBig"
+            android:text="@{model.name}"
+            tools:text="单词名称"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/wordsRightPronunciation"
+            android:textSize="@dimen/textSizeNormal"
+            android:text="@{model.rightPronunciation}"
+            tools:text="正确发音"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:textColor="@color/wordsWrongPronunciation"
+            android:textSize="@dimen/textSizeNormal"
+            android:text="@{model.wrongPronunciation}"
+            tools:text="错误发音"/>
+    </FrameLayout>
+</layout>

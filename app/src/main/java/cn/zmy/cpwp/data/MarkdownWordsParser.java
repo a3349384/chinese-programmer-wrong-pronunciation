@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -50,6 +51,10 @@ public class MarkdownWordsParser
                     Words words = parseLine(line);
                     if (words != null)
                     {
+                        if (wordsList == null)
+                        {
+                            wordsList = new ArrayList<>();
+                        }
                         wordsList.add(words);
                     }
                 }

@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="words">@android:color/holo_blue_light</color>
+    <color name="wordsRightPronunciation">@android:color/holo_blue_light</color>
+    <color name="wordsWrongPronunciation">@android:color/holo_red_light</color>
 </resources>

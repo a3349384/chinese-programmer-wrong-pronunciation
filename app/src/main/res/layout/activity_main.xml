@@ -6,4 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="cn.zmy.cpwp.MainActivity">
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="cn.zmy.cpwp.WordsListFragment"
+        android:id="@+id/wordsListFragment"
+        android:tag="WordsListFragment"/>
 </FrameLayout>
