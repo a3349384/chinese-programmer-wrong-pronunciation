@@ -1,5 +1,6 @@
 package cn.zmy.cpwp;
 
+import android.graphics.Color;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +10,7 @@ import android.view.View;
 import java.util.List;
 
 import cn.zmy.common.listfragment.SimpleListFragment;
+import cn.zmy.common.listfragment.SingleTextEmptyView;
 import cn.zmy.common.utils.ToastUtil;
 import cn.zmy.common.utils.context.ContextManager;
 import cn.zmy.cpwp.adapter.WordsListAdapter;
@@ -27,6 +29,7 @@ public class WordsListFragment extends SimpleListFragment<Words>
     protected void onConfig()
     {
         super.onConfig();
+        setEmptyViewProvider(new SingleTextEmptyView("正在加载单词列表...", Color.LTGRAY));
         setAdapter(new WordsListAdapter());
         mAdapter.setItemClickListener(this::onWordsClick);
     }
