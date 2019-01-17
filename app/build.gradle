@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 
+apply from: 'sign.gradle'
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -11,8 +12,9 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {

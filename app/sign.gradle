@@ -1,0 +1,12 @@
+android {
+    signingConfigs {
+        release {
+            keyAlias 'zmy'
+            keyPassword 'zz20102010'
+            storeFile file('zmy.jks')
+            storePassword 'zz20102010'
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+}
